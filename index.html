@@ -40,24 +40,19 @@ This project creates a network map of compettive relationships between SP100 com
 <p>Node sizes represent <a href="http://slickcharts.com/sp500/">market caps</a>
 <br>	
 <br>							       
-Links represent competitive relationships between companies according to<a href="http://www.marketwatch.com/investing/stock/">MarketWatch.com</a>									  
-<br> <br> <br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br> <br> <br> <br>			
-<br>
-<br>	
-<br>
-<br>	
-<br>
-<br>	
-<br>
-<br>	
-<br>
-<br>	
-<br>
-															     
+Links represent competitive relationships between companies according to <a href="http://www.marketwatch.com/investing/stock/">MarketWatch.com</a>									  
+<br> <br> <br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br> <br> <br> <br>	
+A few quick observations:
+<br> 
+The network has three main clusters: tech, pharmaceutical and financial.   														      
+<br> 
+MasterCard and 3M connect different 															      
+<br> <br> <br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br> <br> <br> <br>																	     
 Technical details: 
 <br>
 <br>
-															     
+A Python script scrapes a list of SP100 companies, market cap sizes and competitive links. 
+The Python library NetworkX creates a JSON file of nodes and links. The JavaScript D3 visualization library creates the graph.															     
 The D3 graph is adapted from <a href="http://bl.ocks.org/eyaler">http://bl.ocks.org/eyaler</a>
 <br>
 See full Github repo <a href="https://github.com/dfield18/SP-Network-Map/blob/master/">here</a>
