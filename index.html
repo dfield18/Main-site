@@ -46,8 +46,8 @@
 <p>		
 	The map confirms that Trump’s base lies is Appalachia, the Midwest and northern New England. 
 	In fact, the only county that swung by more than 15% for the GOP in 2016 and cast over 20,000 votes 
-	was Scioto County, Ohio. <a href="http://money.cnn.com/2016/05/04/news/economy/america-left-behind-white-men/index.html" </a>
-        CNN had an interesting profile on Scioto County in May of last year. 
+	was Scioto County, Ohio. <a href="http://money.cnn.com/2016/05/04/news/economy/america-left-behind-white-men/index.html"> 
+        CNN posted a profile </a> of Scioto County in May of last year. 
 	According to the story, “only 53.8% of men [in Scioto] age 16 to 64 are employed” 
 	and less than 15% of residents are college graduates. <br><br>
 	
@@ -57,7 +57,29 @@
 	
 	I was also surprised to see that only three regions had no swing towards the GOP in 2016: 
 	the Boston-DC corridor, southern California and Utah.
-	</p>
+	</p> <br> <br>
+		<p>
+		Regression model:<br> 
+		I addition to geographic trends, I was curious to see which demographic and economic variables best predict 
+		the shift in votes between the elections. I built a regression model that uses US counties’ demographic and 
+		economic characteristic (as measured by the US Census) with changes in voting. The regression model 
+		confirms news reports that counties’ racial makeups, economic conditions and education levels 
+		all predict shifts away from Democrats in the last election.
+
+		
+		<br><br>
+		Methodology: <br> 
+		I removed all variables with P-values greater than .05. To avoid correlation between 
+		predictive variables, I also removed variable for the percent of white residents. 
+		This data point is already account for by the percent of resident of other racial backgrounds. 
+		The full code and regression results are available in the Github repository. 
+		The regression’s R-square values is I suspect part of the reason the adjusted R-squared value 
+		isn’t higher is that certain cultural variables, such as religion, are not collected in the Census data. 
+		For example, a variable capturing the percent of residents identifying as Mormon would likely help to predict 
+		Utah voters abandoning the GOP in 2016.
+
+		
+		</p>
 	</div>		
 	
 	
@@ -80,7 +102,8 @@ This chart shows competitive relationships between SP100 companies.
 Node sizes represent <a href="http://slickcharts.com/sp500/">market caps</a>.
 <br>	
 <br>							       
-Links represent competitive relationships between companies according to <a href="http://www.marketwatch.com/investing/">MarketWatch.com</a>									  
+Links represent competitive relationships between companies according to <a href="http://www.marketwatch.com/investing/">
+MarketWatch.com</a>									  
 Identifying competitors is inherently subjective, from my research, MarketWatch appears to have the most thorough competitor data.
 <br> <br> <br> 
 A few quick observations:
