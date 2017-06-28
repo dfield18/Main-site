@@ -1,92 +1,320 @@
+
 <html>
 	<style>
   .visualization{
     width: 100%;
   }
   
+  .top{
+    background: white;
+	  float: center;
+	  p.solid {border-style: solid;};
+	   width: 60%;
+	    margin: 0 auto;
+	    font-family: Georgia;
+	    margin-top: 550px;
+  }
+
+
   .white{
     background: white;
 	  float: center;
 	  p.solid {border-style: solid;};
-
+	   width: 60%;
+	    margin: 0 auto;
+	    font-family: Georgia;
+	    margin-top: 50px;
   }
+
   .gray{
-    background: #EFEFEF;
+    background: #F5F5F5;
 	  float: left;
   }
+
+
+  
 		
 		p {
-  margin-left: 100px;
-margin-right: 100px;
+  margin-left: 50px;
+margin-right: 50px;
+font-family: Georgia;
 }
-			
+		
+
+
+
+.photo {
+    text-align: center; /*for centering images inside*/
+}
+.photo img {
+    width: 400px; /*set the width or max-width*/
+    height: 300px; /*this makes sure to maintain the aspect ratio*/
+
+}
+
+
+
+
+
 		
 </style>
-  
+
   <title>
     Data science portfolio 
     
   </title>
 <body>
-	<div class="visualization white">
+
+
+
+
+<div class="visualization gray">
+
+
+<a href="#amzn_wf"> 
+<img src = "https://github.com/dfield18/Main-site/blob/gh-pages/Amazon.PNG?raw=true/" height="300" width="400"
+style="position:absolute; top:0px; left: 380px; border:none;">
+</a>
+
+
+<a href="#S&P">  
+<img src = "https://github.com/dfield18/Main-site/blob/gh-pages/SP.PNG?raw=true/" height="300" width="400"
+style="position:absolute; top:0px; left: 775px; border:none;">
+</a>
+
+
+<a href="#2016_election">  
+<img src = "https://github.com/dfield18/Main-site/blob/gh-pages/gopGains.PNG?raw=true/" height="300" width="400"
+style="position:absolute; top:310px; left: 380px; border:none;">
+</a>
+
+About: I am recent MBA graduate pursing <br> a career in business analytics, <br>
+below is a sample of data science projects from classes <br> and personal projects. <br>
+Contact: dvdfield@umich.edu
+
+<a href="#2016_election_regression">  
+<img src = "https://github.com/dfield18/Main-site/blob/gh-pages/electionModel.PNG?raw=true/" height="300" width="400"
+style="position:absolute; top:310px; left: 775px; border:none;">
+</a>
+
+
+
+
+<div class="visualization top">
+
+	<a name="amzn_wf"></a>
 		<font size="5">
-	<p> Below is a sample of data science projects from classes and personal projects. <br><br>
+	<p> Mapping Amazon's Acqusition of Whole Foods 
+<br>
 			</p>
 	</font>
-	</div>
-	
-	<div class="visualization white">										       
+
 		<p>
-			This project examines which geographic, demographic and economic variables best explain changes 
-			in support for the Republican presidential candidate between 2012 and 2016. 
-			I am partly interested in whether the media narrative of white working class support boosting 
-			Trump is grounded in empirical evidence. I am also curious how successful a regression model can be 
-			in predicting net changes in support for the GOP from 2012 to 2016.  <br><br>
-			
-			To visualize evolving voter preferences geographically, I created a map highlighting changes 
-			in the voting habits between the two elections. Red areas represent counties with a higher percent of 
+			Amazon's recent acquisition of Whole Foods seems odd at first glance, Amazon already has its own grocery delivery service
+			and has only made small inroads into in-person retail so far. I wanted to see what likely motivated Amazon to buy Whole Foods. Analysts have 
+			<a href="https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/deniselyohn/2014/10/17/so-amazon-thinks-it-can-do-retail"> speculated for years </a>
+			that Amazon hoped to enter the in-person retail space. Physical stores allows Amazon to cut down on delivery time for common items and lower transportation costs. One of 
+			biggest costs for online retailers is "the last mile" or the distance between fufillment centers and individual customers' homes.
+
+			<br><br>
+			One driving force for Amazon is the ability to instantly have access to 400+ mostly urban and high-income locations. As the map below shows,
+			Amazon's current fufillment centers are mostly located edges of urban areas. Unlike Amazon and other national
+			grocery chains, Whole Foods locations are almost exclusively in urban and high-income areas. In addition, Amazon would likely needed to pay a premium
+			set-up a network of hundred of prime (no pun intended) real estate locations in a short time period.
+			In other words, once Amazon decided to expand to real-life stores within the next few years, acquiring Whole Foods was one of only a handful of possible options. 
+			 
+			  <br><br>
+			</p>
+
+
+
+ <iframe src="https://dfield18.github.io/amznWfMap/mapAmznWF.html" width="100%" height="57%" frameborder="0">
+</iframe>
+<img src = "https://github.com/dfield18/amznWfMap/blob/gh-pages/locationLegend.PNG?raw=true" height="32" width="380"></center>	
+
+<p>
+		Technical detials:
+		<br>
+
+		 A Python script scrapes <a href ="http://www.wholefoodsmarket.com/stores/list">Whole Food's website</a> for the addresses of its stores. The script then 
+		 found the geo coordinates of the addresses of Google Maps. 
+		 Amazon fufillment center locations come from <a href="https://github.com/sonnenglas/amazon-fba-fulfillment-center-list/issues">here</a>. I used the same
+		 Python script to find the geo coordinates of the Amazon locations.
+		 Finally, R's Leaflet package produces the map.
+		 The full Github repository is <a href="https://github.com/dfield18/SP-Network-Map/tree/gh-pages">here</a>.
+
+
+		The map is based off code from this <a href="http://www.computerworld.com/article/3038270/data-analytics/create-maps-in-r-in-10-fairly-easy-steps.html">website</a>. The full Github repository is <a href="https://github.com/dfield18/amznWfMap/tree/gh-pages">here</a>.
+</p>
+
+
+</div>
+<div class="visualization gray">
+
+</div>
+<div class="visualization white">
+	<a name="S&P"></a>
+		<font size="5">
+	<p> Network graph of the S&P
+<br>
+</p>
+	</font>
+<p>
+
+The below network graph comes from a network science class, I was curious to see if an underlying structure linked the world's largest companies. 
+Node sizes represent market caps of the 100 largest S&P companies and links represent competitive relationships between companies according to <a href="http://www.marketwatch.com/investing/">MarketWatch.com</a>.
+Identifying competitors is inherently subjective, from my research, MarketWatch appears to have the most thorough competitor data. 
+A full SP500 graph is <a href="https://dfield18.github.io/SP-Network-Map/sp500.html">here</a>. 
+
+</p>
+ <iframe src="https://dfield18.github.io/SP-Network-Map/sp100.html" width="100%" height="100%" frameborder="0">
+</iframe>
+
+<p> 
+		<ul> A few initial insights are:
+ 		 <li> The SP100 network has four main clusters: financial services, manufacturing, pharmaceutical and tech. </li>
+
+		<li> MasterCard and 3M each connect two of the industry clusters. MasterCard, which connects the finanical and tech clusters, is arguably a tech company 
+		in that it has partnered with Google and AT&T on mobile payment products. Other credit card companies have not focused on mobile payment products to the same extent. 
+		3M, which links manufacturing with tech, is debately a competitor of Apple in that 3M produces touch screens and multimedia projectors. </li>
+
+		<li> For the 500 graph, GE has the highest degree (number of competitor links) at 26, followed by Microsoft at 23 </li>
+
+		<li> The company with the highest degree centrality (a measure of a node's closeness to other nodes in the network) is again GE at .056 and Microsoft at .046.
+
+		<li> The correlation between nodes' degress (each nodes' numbers of links) and size (market cap) is .31 for both the SP100 and SP500. </li>
+
+		<br>
+		Technical detials:
+		<br>
+
+		 A Python script scrapes websites for SP100 companies, market cap sizes and competitive data. The Python library NetworkX generates a JSON file of nodes and links. 
+		 The JavaScript D3 visualization library creates the graph.	The D3 graph is adapted from <a href="http://bl.ocks.org/eyaler">http://bl.ocks.org/eyaler</a>.
+		 The full Github repository is <a href="https://github.com/dfield18/SP-Network-Map/tree/gh-pages">here</a>.
+</p>
+
+
+
+
+
+
+</div>
+<div class="visualization gray">
+
+</div>
+	<div class="visualization white">
+
+	<a name="2016_election"></a>
+		<font size="5">
+	<p> Visualizing GOP Gains in 2016
+<br>
+			</p>
+	</font>
+								       
+		<p>
+			This project maps GOP gains between the 2012 and 16 elecitons. Red areas represent counties with a higher percent of 
 			votes for the Republican candidates in 2016 than in 2012. Blue areas represent counties with a 
 			lower percent of votes for the Republican candidate (although, as in the case of Utah, not necessarily 
 			greater support for the Democratic candidate).  <br><br>
 			</p>
 	
- <iframe src="https://dfield18.github.io/test2/mapd" width="105%" height="100%" frameborder="0">
+ <iframe src="https://dfield18.github.io/electionMap/mapd" width="100%" height="57%" frameborder="0">
 </iframe>
-
-<p>		
-	The map confirms that Trump’s base lies is Appalachia, the Midwest and northern New England. 
-	In fact, the only county that swung by more than 15% for the GOP in 2016 and cast over 20,000 votes 
+<p>
+<ul>
+  <li>The map confirms the belief that Trump’s base lies is Appalachia and the Midwest. I was surprised though 
+  to see that Rebublicans received a major bump in support in northern New England.</li>
+  <li>The only county that swung by more than 15% for the GOP in 2016 and cast over 20,000 votes 
 	was Scioto County, Ohio. <a href="http://money.cnn.com/2016/05/04/news/economy/america-left-behind-white-men/index.html"> 
-        CNN posted a profile </a> of Scioto County in May of last year. 
+    CNN posted an interesting profile </a> of Scioto County in May of last year. 
 	According to the story, “only 53.8% of men [in Scioto] age 16 to 64 are employed” 
-	and less than 15% of residents are college graduates. <br><br>
-	
-	Interestingly, a number if majority Hispanic counties near the US-Mexico border swung from 
-	extremely Democrat to moderately Democrat in 2016. For example, support for the GOP candidate in 2016 jumped by 
-	9% in Duval County, Texas, which is 96% Hispanic. <br><br>
-	
-	I was also surprised to see that only three regions had no swing towards the GOP in 2016: 
-	the Boston-DC corridor, southern California and Utah.
-	</p> <br> <br>
-		<p>
-		Regression model:<br> 
-		I addition to geographic trends, I was curious to see which demographic and economic variables best predict 
-		the shift in votes between the elections. I built a regression model that uses US counties’ demographic and 
-		economic characteristic (as measured by the US Census) with changes in voting. The regression model 
-		confirms news reports that counties’ racial makeups, economic conditions and education levels 
-		all predict shifts away from Democrats in the last election.
+	and less than 15% of residents are college graduates. </li>
+	<li> A number of majority Hispanic counties near the US-Mexico border swung from 
+	extremely Democrat to moderately Democrat in 2016. For example, in Duval County, Texas, which is 96% Hispanic,
+	support for the GOP candidate in 2016 jumped by	9% in 2016. </li>
+	<li> Only three regions had no swing towards the GOP in 2016: the Boston-DC corridor, southern California and Utah.
+	<br><br>
+	The map is based off  code from this <a href="http://www.computerworld.com/article/3038270/data-analytics/create-maps-in-r-in-10-fairly-easy-steps.html">website</a>
+	The Github repository is <a href="https://github.com/dfield18/electionMap/tree/gh-pages">here</a>.
 
-		
+</ul> 
+</li>
+<br>
+</p> 
+</div>
+
+	 
+<div class="visualization gray">
+
+</div>
+
+
+<div class="visualization white">
+	<a name="2016_election_regression"></a>
+		<font size="5">
+	<p> Visualizing County Voting Changes   
+<br>
+			</p>
+	</font>
+	
+	</p> 
+	
+		<p>
+	In addition to geographic trends, I was curious about which demographic and economic variables best predict 
+	changes in votes between the elections. 
+	I created a regression model that predicts the change in the percent of GOP votes between 2012 and 16.
+	The model uses publically availible voting data from <a href="http://www.politico.com/2016-election/results/map/president">Politco</a>
+	and demographic and economic data from the <a href="https://www.kaggle.com/benhamner/2016-us-election"> the US Census</a>. All data is at the county level. 
+	Although individual precint (voting location) data is publically availible, there is surprisingly no central database of results from all
+	precients. 
+	<br><br>
+	The regression model confirms news reports that counties’ racial makeups and education levels, and to a lesser extent, economic conditions, best predict 
+	voting behavior in last year's election. Plots of demographic variables' correlation with 2012-16 voting changes and the full regression model are below.
+
+	<br><br>
+	<b> Education level: </b>
+	</p>
+	<center>
+	<img src = "https://github.com/dfield18/electionAnalysis/blob/master/CollegeVote.png?raw=true"></center>
+
+	<p>
+	<br><br>
+	<b> Income level: </b>
+	</p>
+	<center>
+	<img src = "https://github.com/dfield18/electionAnalysis/blob/master/incomeVote.png?raw=true"></center>
+
+		<p>
+	<br><br>
+	<b> % Hispanic: </b>
+	</p>
+	<center>
+	<img src = "https://github.com/dfield18/electionAnalysis/blob/master/HispanicVote.png?raw=true"></center>
+
+
+
+			<p>
+	<br><br>
+	<b> Regression model: </b>
+	</p>
+	<center>
+	<img src = "https://github.com/dfield18/electionAnalysis/blob/master/regressionModel.PNG?raw=true"></center>
+
+
+	
 		<br><br>
+		<p>
 		Methodology: <br> 
 		I removed all variables with P-values greater than .05. To avoid correlation between 
 		predictive variables, I also removed variable for the percent of white residents. 
 		This data point is already account for by the percent of resident of other racial backgrounds. 
 		The full code and regression results are available in the Github repository. 
-		The regression’s R-square values is I suspect part of the reason the adjusted R-squared value 
-		isn’t higher is that certain cultural variables, such as religion, are not collected in the Census data. 
+		<br><br>
+		The adjusted R-squared value isn’t higher is that certain cultural variables, such as religion, are not collected in the Census data. 
 		For example, a variable capturing the percent of residents identifying as Mormon would likely help to predict 
 		Utah voters abandoning the GOP in 2016.
+		<br><br>
+		The Github repository is <a href="https://github.com/dfield18/electionAnalysis/">here</a>.
 
 		
 		</p>
@@ -95,71 +323,6 @@ margin-right: 100px;
 	
 
 
-<div class="visualization gray">
 
-   <font size="3"> 
-<p align="left">
-</p> 
-<iframe src="https://dfield18.github.io/SP-Network-Map/sp100.html" width="1000" height=800" align="left" frameborder="0" >
-</iframe>
-<br>
-<p>
-<font size="5"> 													      
-SP index network graph</font>
-<br><br>
-<font size="3">
-This chart shows competitive relationships between SP100 companies.
-Node sizes represent <a href="http://slickcharts.com/sp500/">market caps</a>.
-<br>	
-<br>							       
-Links represent competitive relationships between companies according to <a href="http://www.marketwatch.com/investing/">
-MarketWatch.com</a>									  
-Identifying competitors is inherently subjective, from my research, MarketWatch appears to have the most thorough competitor data.
-<br> <br> <br> 
-A few quick observations:
-<br><br> 
-The network has four main clusters: financial services, manufacturing, pharmaceutical and tech.   														      
-<br><br>
-MasterCard and 3M each connect two of the industry clusters. MasterCard, which connects the finanical and tech 
-clusters, is arguably a tech company in that it has partnered with Google and AT&T on mobile payment products. 
-Other credit card companies have not focused on mobile payment products to the same extent. 
-3M, which links manufacturing with tech, is debately a competitor of Apple in that 3M produces touch screens and multimedia projectors.
-<br><br>
-There is correlation between nodes' degress (each nodes' numbers of links) and size (market cap).															
-																																											
-<br> <br> <br> <br> <br> <br><br><br><br><br><br><br>												      														     
-Technical details: 
-<br>
-A Python script scrapes websites for SP100 companies, market cap sizes and competitive data. 
-The Python library NetworkX generates a JSON file of nodes and links. The JavaScript D3 visualization library creates the graph.															     
-The D3 graph is adapted from <a href="http://bl.ocks.org/eyaler">http://bl.ocks.org/eyaler</a>.
-<br>
-See full Github repo <a href="https://github.com/dfield18/SP-Network-Map/tree/gh-pages">here</a>.								
-</p>										    
-</div>
-  <br>
-  <br>
-<p>
-It's a bit harder to visualize, but a full SP500 network graph is below, the interactive map is 
-<a href="https://dfield18.github.io/SP-Network-Map/sp500.html">here</a>.									       
-										       
-<div class="visualization gray">										       
-		
-</div>				
-<div class="visualization white">
-				
-    More test text
-    <br>
-    <br>
-    <br>
-  <br>
-
-  
-  more test text
-  
-       <iframe src="https://dfield18.github.io/test2/mapAmznWF.html" width="105%" height="100%" frameborder="0">
-</iframe>
-    
-    </div> 
   </body>
 </html>
