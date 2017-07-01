@@ -89,7 +89,7 @@ style="position:absolute; top:300px; left: 340px; border:none;">
 </a>
 
 About: I am a recent MBA graduate pursuing <br> a career in business analytics, <br>
-below is a sample of data science projects from classes <br> and personal projects. <br>
+below is a sample of data science projects <br> from classes and personal projects. <br>
 Contact: dvdfield@umich.edu
 
 <a href="#2016_election_regression">  
@@ -110,20 +110,23 @@ style="position:absolute; top:300px; left: 735px; border:none;">
 	</font>
 
 		<p>
-			Amazon's recent acquisition of Whole Foods seems odd at first glance,
+			Amazon's recent acquisition of Whole Foods seems odd at first glance.
 			<a href="https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/deniselyohn/2014/10/17/so-amazon-thinks-it-can-do-retail"> 
 			While analysts have speculated for years</a> 
-			that Amazon would expand into real-life retail, Amazon has so far focused on opening its own Amazon-branded 
+			that Amazon would expand into real-life retail, Amazon has so far focused on its own Amazon-branded 
 			stores. 
-			This project maps out Amazon's real estate reason for Amazon's purchase.
-			Physical stores allows Amazon to cut down the delivery time for common 
+			This project explores one of the main reason for Amazon's Whole Foods purchase, the geographic
+			footprint it instantly gained.<br><br>
+			Physical stores allow Amazon to cut down the delivery time for common 
 			items and lower transportation costs. One of biggest costs for online retailers is "the last mile" 
 			or the distance between fufillment centers and individual customers' homes.
 
 			<br><br>
-			One driving force for the Whole Foods purchase is Amazon instantly having access to 400+ mostly urban and high-income locations. 
+			One driving force for the Whole Foods purchase is Amazon suddenly having 400+ mostly urban and 
+			high-income locations. 
 			As the map below shows,
-			Amazon's current fufillment centers are mostly located edges of urban areas. Unlike Amazon and most other national
+			Amazon's current fufillment centers are mostly located edges of urban areas. 
+			Unlike Amazon and most national
 			grocery chains, Whole Foods locations are almost exclusively in urban and high-income areas. 
 			In theory, Amazon could have built its own network of hundreds of prime (no pun intended)
 			real estate locations in a short time period, but it would likely have had to  pay premium to do so.			
@@ -143,10 +146,11 @@ style="position:absolute; top:300px; left: 735px; border:none;">
 		Technical detials:
 		<br>
 
-		 A Python script scrapes <a href ="http://www.wholefoodsmarket.com/stores/list">Whole Food's website</a> for the addresses of its stores. The script then 
-		 found the geo coordinates of the addresses of Google Maps. 
+		 A Python script scrapes <a href ="http://www.wholefoodsmarket.com/stores/list">Whole Food's website</a> 
+		for the addresses of its stores. The script then uses Google Maps to
+		 find the geo coordinates (longitude and latitutde) of the addresses. 
 		 Amazon fufillment center locations come from <a href="https://github.com/sonnenglas/amazon-fba-fulfillment-center-list/issues">here</a>. I used the same
-		 Python script to find the geo coordinates of the Amazon locations.
+		 The Python script also finds the geo coordinates of the Amazon locations.
 		 Finally, R's Leaflet package produces the map.
 		 The full Github repository is <a href="https://github.com/dfield18/SP-Network-Map/tree/gh-pages">here</a>.
 
