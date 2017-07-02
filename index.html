@@ -280,15 +280,15 @@ A full SP500 graph is <a href="https://dfield18.github.io/SP-Network-Map/sp500.h
 	changes in votes between the presidential elections. 
 	I created a regression model that predicts the change in the percent of GOP votes between 2012 and 16.
 	The model uses publically availible voting data from 
-			<a href="http://www.politico.com/2016-election/results/map/president">Politco</a>
+			<a href="http://www.politico.com/2016-election/results/map/president">Politico</a>
 	and demographic and economic data from the <a href="https://www.kaggle.com/benhamner/2016-us-election"> 
 			the US Census</a>. All data is at the county level. 
 	Although individual precint (voting location) data is publically availible, 
 			there is surprisingly no central database of results from all
 	precients. 
 	<br><br>
-	The regression model confirms news reports that counties’ racial makeups and education levels, and to a lesser extent, 
-			economic conditions, best predict 
+	The regression model confirms news that counties’ racial makeups, education levels, and 
+			economic conditions predict 
 	voting behavior in last year's election. Plots of demographic variables' correlation with 2012-16 voting changes 
 			and the full regression model are below.
 
@@ -327,12 +327,13 @@ A full SP500 graph is <a href="https://dfield18.github.io/SP-Network-Map/sp500.h
 		<p>
 		Methodology: <br> 
 		I removed all variables with P-values greater than .05. To avoid correlation between 
-		predictive variables, I also removed variable for the percent of white residents as 
-		this data point is already account for by the percent of resident of other racial backgrounds. 
+		predictive variables, I also removed variable for the percent of white residents.  
+		This data point is already accounted for by the percent of resident of other racial backgrounds. 
 		<br><br>
-		The adjusted R-squared value isn’t higher is that certain cultural variables, such as religion, are not collected in the Census data. 
-		For example, a variable capturing the percent of residents identifying as Mormon would likely help to predict 
-		Utah voters abandoning the GOP in 2016.
+		The reason the adjusted R-squared value isn’t higher is that certain cultural variables, 
+			such as religion, are not collected in the Census data. 
+		For example, a variable capturing the percent of residents identifying as Mormon would likely forecast
+			2012 GOP voters not supporting Trump.
 		<br><br>
 		The Github repository is <a href="https://github.com/dfield18/electionAnalysis/">here</a>.
 
