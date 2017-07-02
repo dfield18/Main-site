@@ -167,8 +167,10 @@ style="position:absolute; top:300px; left: 735px; border:none;">
 	</font>
 <p>
 
-The below network graph comes from a network science class, I was curious to see if an underlying structure linked the world's largest companies. 
-Node sizes represent market caps of the 100 largest S&P companies and links represent competitive relationships between companies according to <a href="http://www.marketwatch.com/investing/">MarketWatch.com</a>.
+The below network graph comes from a network science class, I was curious to see if an underlying structure linked the world's top 
+	companies. 
+Node sizes represent market caps of the 100 largest S&P companies and links represent competitive relationships 
+	between companies according to <a href="http://www.marketwatch.com/investing/">MarketWatch.com</a>.
 Identifying competitors is inherently subjective, from my research, MarketWatch appears to have the most thorough competitor data. 
 A full SP500 graph is <a href="https://dfield18.github.io/SP-Network-Map/sp500.html">here</a>. 
 
@@ -180,31 +182,32 @@ A full SP500 graph is <a href="https://dfield18.github.io/SP-Network-Map/sp500.h
 		<ul> A few initial insights are:
  		 <li> The SP100 network has four main clusters: financial services, manufacturing, pharmaceutical and tech. </li>
 
-		<li> MasterCard and 3M each connect two of the industry clusters. MasterCard, which links the finanical and 
+		<li> MasterCard and 3M each connect two of the industry clusters. MasterCard, which links the financial and 
 			tech clusters, is arguably a tech company 
 		in that it has partnered with Google and AT&T on mobile payment products. 
-		3M, which links manufacturing with tech, is debately a competitor of Apple in that 3M produces touch screens and 
+		3M, which links manufacturing with tech, is debatebly a competitor of Apple in that 3M produces touch screens and 
 			multimedia projectors. </li>
 
-		<li> For the 500 graph, GE has the highest degree (number of competitor links) at 26, followed by Microsoft at 23 </li>
+		<li> For the SP500 graph, GE has the highest degree (number of competitor links) at 26, followed by Microsoft at 23 </li>
 
 		<li> The company with the highest degree centrality (a measure of a node's closeness to all other nodes in the network) 
 			is again GE at .056, followed by Microsoft at .046.
 
-		<li> The correlation between nodes' degress (each nodes' numbers of links) and size (market cap) is .31 for both the SP100 and SP500. </li>
+		<li> The correlation between nodes' degrees (each nodes' numbers of links) and size (market cap) is .31 for 
+			both the SP100 and SP500. </li>
 
 		<br>
 		Technical detials:
 		<br>
 
-		 A Python script scrapes websites for SP100 companies, market cap sizes and competitive data. The Python library NetworkX generates a JSON file of nodes and links. 
-		 The JavaScript D3 visualization library creates the graph.	The D3 graph is adapted from <a href="http://bl.ocks.org/eyaler">http://bl.ocks.org/eyaler</a>.
+			A Python script scrapes this <a href="http://slickcharts.com/sp500">website</a> 
+			for market cap sizes, the script scrapes <a href="http://www.marketwatch.com/investing/">MarketWatch.com</a>
+			for data on company's competitors.
+			The Python library NetworkX generates a JSON file of nodes and links. 
+		 The JavaScript D3 visualization library creates the graph.	
+			The D3 graph is adapted from <a href="http://bl.ocks.org/eyaler">http://bl.ocks.org/eyaler</a>.
 		 The full Github repository is <a href="https://github.com/dfield18/SP-Network-Map/tree/gh-pages">here</a>.
 </p>
-
-
-
-
 
 
 </div>
