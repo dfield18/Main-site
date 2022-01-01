@@ -1,0 +1,112 @@
+<html>
+<body>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="sankey_multiple" style="width: 900px; height: 300px;"></div>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["sankey"]});
+  google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Employees moving companies');
+    data.addRows([
+
+
+
+['Amazon', ' Amazon', 0],
+['Amazon', ' Apple', 0],
+['Amazon', ' Cisco Systems', 0],
+['Amazon', ' Cognizant Technology Solutions', 0],
+['Amazon', ' Dell Technologies', 0],
+['Amazon', ' DXC Technology', 0],
+['Amazon', ' Facebook (Meta)', 0],
+
+['Amazon', ' IBM', 0],
+
+['Amazon', ' Google (Alphabet)', 5300],
+['Amazon', ' HP', 0],
+['Amazon', ' Hewlett Packard Enterprise', 0],
+['Amazon', ' Microsoft', 5000],
+['Amazon', ' Oracle', 0],
+['Amazon', ' Qualcomm', 0],
+
+
+['Apple', ' Google (Alphabet)', 3400],
+['Cisco Systems', ' Google (Alphabet)', 3400],
+['Cisco Systems', ' Microsoft', 2600],
+['Cognizant Technology Solutions', ' IBM', 4500],
+['Dell Technologies', ' Microsoft', 2100],
+['Facebook (Meta)', ' Google (Alphabet)', 2500],
+['Google (Google (Alphabet))', ' Amazon', 2200],
+['Google (Google (Alphabet))', ' Facebook (Meta)', 2600],
+['Google (Google (Alphabet))', ' Microsoft', 2200],
+['Hewlett Packard Enterprise', ' Cisco Systems', 2400],
+['Hewlett Packard Enterprise', ' Dell Technologies', 3200],
+['Hewlett Packard Enterprise', ' DXC Technology', 4000],
+['Hewlett Packard Enterprise', ' Google (Alphabet)', 2300],
+['Hewlett Packard Enterprise', ' HP', 5500],
+['Hewlett Packard Enterprise', ' IBM', 5300],
+['Hewlett Packard Enterprise', ' Microsoft', 4800],
+['Hewlett Packard Enterprise', ' Oracle', 4000],
+['HP', ' DXC Technology', 5300],
+['HP', ' Hewlett Packard Enterprise', 5400],
+['IBM', ' Amazon', 3800],
+['IBM', ' Apple', 2000],
+['IBM', ' Cisco Systems', 3000],
+['IBM', ' Cognizant Technology Solutions', 6500],
+['IBM', ' Dell Technologies', 3300],
+['IBM', ' DXC Technology', 3100],
+['IBM', ' Google (Alphabet)', 5500],
+['IBM', ' Microsoft', 7800],
+['IBM', ' Oracle', 7000],
+['IBM', ' Salesforce', 3200],
+['Intel', ' Apple', 4800],
+['Intel', ' Google (Alphabet)', 2700],
+['Intel', ' Microsoft', 3000],
+['Intel', ' Qualcomm', 2000],
+['Microsoft', ' Amazon', 6900],
+['Microsoft', ' Apple', 2600],
+['Microsoft', ' Facebook (Meta)', 3200],
+['Microsoft', ' Google (Alphabet)', 10000],
+['Microsoft', ' Oracle', 3000],
+['Microsoft', ' Salesforce', 2500],
+['Oracle', ' Google (Alphabet)', 3900],
+['Oracle', ' IBM', 2900],
+['Oracle', ' Microsoft', 5000],
+['Oracle', ' Salesforce', 5500]
+
+
+    ]);
+
+    // Set chart options
+
+    var colors = ['#8dd3c7', '#ffffb3', '#bebada', '#fb8072', '#80b1d3', '#fdb462', '#b3de69', '#fccde5', '#d9d9d9', '#bc80bd', '#ccebc5', '#ffed6f'
+
+	
+];
+
+    var options = {
+      height: 1000,
+      sankey: {
+        iterations: 0,
+        node: {
+          colors: colors
+        },
+        link: {
+          colorMode: 'gradient',
+          colors: colors
+        }
+      }
+    };
+
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+    chart.draw(data, options);
+   }
+</script>
+</body>
+</html>
